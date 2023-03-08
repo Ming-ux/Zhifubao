@@ -1,0 +1,66 @@
+<!-- 表单页 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>提交图片</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./css/common.css">
+    <link href="./css/submit.css" rel="stylesheet"  type="text/css"/>
+</head>
+
+<body>
+    <nav>
+        <a class="logo" href="https://campus.antfin.com" target="_blank"> 
+            <img src="./imgs/logo.png" />
+        </a>
+            <a href="./index.html" target="_self">首页</a>
+            <a href="./index.html#gallary" target="_self">画廊</a>
+            <a href="./index.html#abount" target="_self">关于</a>
+            <a href="./submit.html" target="_self">上传</a>
+            <a class="search" href="https://www.google.com/search?q=前端学习" target="_blank">
+                <img src="./imgs/search.png" />
+            </a>
+    </nav>
+
+    <header>
+        <div class="box"></div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <h3>记录眼中的美好</h3>
+    </header>
+
+    <main class="all">
+        <section class="form-wrap">
+            <!-- 照片上传区域 -->
+            <div class="file-wrap">
+                <label for="upload">
+                    <img src="./imgs/upload-large.png" class="uploadlogo" id="preview">
+                </label>
+                <input id="upload" type="file" accept=".png,.jpg,.jpeg">
+            </div>
+            <!-- 图片信息填写 -->
+            <div class="input-wrap">
+                <input type="text" placeholder="图片名称" class="inputbox" id="name"><br>
+                <input type="text" placeholder="拍摄者" class="inputbox" id="photographer"><br>
+                <textarea  id="desc" placeholder="写下对图片的描述吧~"></textarea>
+            </div>
+        </section>
+
+        <section class="btn-wrap">
+            <!-- 点击提交执行上传 -->
+            <input type="button" id="publish-btn" value="发布瞬间" onclick="uploadFile();"/>
+
+        </section>
+    </main>
+
+    <footer>
+        <span>Copyright © 2021支付宝前锋营</span>
+        <a href="https://xcloud.alipay.com" target="blank"><img src="./imgs/afx-logo.png"></a>
+    </footer>
+    <script src="./js/submit.js"></script>
+ 
+</body>
+
+</html>

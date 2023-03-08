@@ -1,0 +1,205 @@
+/* 覆盖浏览器默认值 */
+* {
+    box-sizing: border-box;
+}
+html,
+body,
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+html {
+    font-family: 'PingFang SC';
+    box-sizing: border-box;
+}
+
+body {
+    /* #ffffff可缩写为#fff */
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 页面主体结构 */
+
+header {
+    height: 470px;
+    background: #1677FF;
+    position:relative;
+    overflow-y:hidden;
+    overflow-x:hidden;
+
+}
+header h4,h1{
+    z-index: 2;
+
+}
+header .boxA{
+    background-color: #1e7cff;
+    box-shadow:1px 3px 20px 10px rgba(9, 42, 88, 0.1);
+    width:300px;
+    height:300px;
+    position: absolute;
+    top:320px;
+    left:20px;
+    z-index: 1;
+    transform:rotate(45deg);
+    animation: run;
+    animation-duration: 6s;
+    animation-timing-function: cubic-bezier(0.69, 0.01, 0.29, 0.99);
+    animation-iteration-count: infinite;
+}
+    @keyframes run{
+        0%{
+            transform:rotate(45deg);
+        }
+        50%{
+            transform:rotate(225deg);
+        }
+        100%{
+            transform:rotate(405deg);
+        }
+        
+    }
+header .circle1{
+    background-color: #1e7cff;
+    box-shadow:1px 3px 20px 10px rgba(9, 42, 88, 0.1);
+    width:100px;
+    height:100px;
+    position: absolute;
+    top:130px;
+    left:400px;
+    z-index: 1;
+    border-radius: 50%;
+    transform:rotate(45deg);
+    animation: run1;
+    animation-duration: 6s;
+    animation-timing-function: cubic-bezier(0.69, 0.01, 0.29, 0.99);
+    animation-iteration-count:infinite;
+}
+@keyframes run1{
+    0%{
+        transform:scale(1);
+        top:130px;
+        left:400px;
+    }
+    50%{
+        transform:scale(1.2);
+        top:150px;
+        left:390px;
+    }
+    100%{
+        transform:scale(1);
+        top:130px;
+        left:400px;
+    }
+    
+}
+header .circle2{
+    background-color: #1e7cff;
+    box-shadow:1px 3px 20px 10px rgba(9, 42, 88, 0.1);
+    width:500px;
+    height:500px;
+    position: absolute;
+    border-radius: 50%;
+    top:158px;
+    left:1000px;
+    z-index: 1;
+    transform:rotate(45deg);
+    animation: run2;
+    animation-duration: 6s;
+    animation-timing-function: cubic-bezier(0.02, 0.54, 0.29, 0.99);
+    animation-iteration-count: infinite;
+}
+@keyframes run2{
+    0%{
+    transform:scale(1);
+    }
+    50%{
+    transform:scale(1.1);
+    }
+    100%{
+        transform:scale(1);
+
+    }
+    
+}
+
+main {
+    /* 纵向撑满屏幕，将footer挤到页面底部 */
+    flex: 1;
+    /* flex:1等于 flex-grow:1;flex-shrink:1;flex-basic:auto]*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    width:100vw;
+}
+
+
+/* 导航栏 */
+
+nav {
+    /* 导航栏悬浮在其他元素上层，采用绝对定位 */
+    position: fixed;
+    padding: 40px 80px 10px 80px;
+    left: 0;
+    right: 0;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    background-color: #1677FF;
+    z-index: 3;
+
+}
+
+nav .logo{
+    /* 占满剩余空间，将其他元素挤到最右侧 */
+    flex: 1.0;
+}
+
+nav .logo img {
+    width: 150px;
+    height: 36px;
+}
+
+nav a {
+    color: #fff;
+    font-size: 16px;
+    font-family: Helvetica;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 18px;
+}
+
+nav .search img {
+    width: 16px;
+    height: 16px;
+}
+
+
+
+/* 页脚 */
+
+footer {
+    padding: 0 80px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+footer span {
+    flex: 1.0;
+}
+
+footer img {
+    width: 24px;
+    height: 18px;
+}

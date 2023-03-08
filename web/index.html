@@ -1,0 +1,194 @@
+<!-- 首页 -->
+<!DOCTYPE html>
+<!-- 声明 -->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>前端课堂首页</title>
+    <link rel="icon" href="favicon.ico" /> 
+    <link href="./css/common.css" rel="stylesheet">
+    <!-- <link href="./css/index.css" rel="stylesheet"> -->
+    <link href="./css/index.less" rel="stylesheet/less" type="text/css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js"></script>
+
+</head>
+<body>
+    <nav>
+        <a class="logo" href="https://campus.antfin.com" target="_blank"> 
+            <img src="./imgs/logo.png" />
+        </a>
+        <a class="word" href="./index.html" target="_self">首页</a>
+        <a class="word" href="./index.html#gallary" target="_self">画廊</a>
+        <a class="word" href="./index.html#abount" target="_self">关于</a>
+        <a class="word" href="./submit.html" target="_self">上传</a>
+        <a class="search" href="https://www.google.com/search?q=前端学习" target="_blank">
+            <img src="./imgs/search.png" />
+        </a>
+    </nav>
+
+
+    <header>
+        <div class="boxA"></div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+
+        <h4>让前端学习更有趣</h4>
+        <h1>蚂蚁前端课堂</h1>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <h2>画廊</h2>
+            <p class="record">记录生活瞬间</p>
+            <br>
+            <ul id="picts">
+                <li class="add">
+                    <a href="./submit.html">
+                        <img src="./imgs/upload.png" class="imgdisplay" id="add">
+                    </a>
+                </li>
+                <!-- 以下appendPic追加图片 -->
+                <!-- <li class="photos">
+                    <img src="./${picPath}" class="imgdisplay"/>
+                    <h5>${name}</h5>
+                    <h6>${photographer}</h6>
+                    <p>${desc}</p>
+                  </li> -->
+
+            </ul>
+        </section>  
+        <br>
+        <section class="gallery">
+            <h2>留言区</h2>
+            <p class="record">留下的你评论</p>
+            <br>
+            <div id="commentsBox">
+                <ul id="comments">
+                    <!-- 
+                        `<li class="comment">
+                        <p class="userword">${comment}</p>
+                        <span class="theName">----- ${name}</span>
+                        </li>`;
+                     -->
+                </ul>
+            </div>
+
+            <div id="commentarea" class="commentType">
+                <div id="inputBoxs" class="commentType">
+                    <div id="box1">
+                        <label for="writeName" class="label">留名:</label>
+                        <input type="text" id="writeName" class="box" placeholder="留下你的大名">
+                    </div>
+                    <div id="box2">
+                        <label for="writeComment" class="label">留言:</label>
+                        <input type="text" id="writeComment" class="box" placeholder="写下你的评论">
+                    </div>
+                </div>
+
+                <div  class="commentType">
+                    <button id="addComment" onclick="HandleAppendComm()">Submit</button>
+                </div>  
+            </div>
+                
+                
+            
+        </section>  
+        <br>
+        <section class="about">
+            <h2>关于我</h2>
+            <div class="last">
+                <div class="introduction">
+                    <img src="./imgs/avatar_self.jpeg" class="selfimg"><br>
+                    <h4>小明</h4>
+                    <P class="mid">蚂蚁课堂</P>
+                    <P class="tiny">“零基础学前端”第5期学员</P>
+                </div>
+                <div class="book" id="book1">
+                    <h3>书籍</h3>
+                    <ul>
+                        <li>
+                            <a href="https://book.douban.com/subject/33398314/" target="_blank">《CSS权威指南》</a>
+                        </li>
+                        <li>
+                            <a href="https://book.douban.com/subject/35396470/" target="_blank">《JavaScript权威指南》</a>
+                        </li>
+                        <li>
+                            <a href="https://book.douban.com/subject/25768396/" target="_blank">《深入浅出Node.js》</a>
+                        </li>
+                        <li>
+                            <a href="https://book.douban.com/subject/25786074/" target="_blank">《HTML5权威指南》</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="book">
+                    <h3>资源</h3>
+                    <ul>
+                        <li>
+                            <a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML" target="_blank">MDN</a>
+                        </li>
+                        <li>
+                            <a href="https://nodejs.org/zh-cn/docs" target="_blank">nodejs.org</a>
+                        </li>
+                        <li>
+                            <a href="https://www.w3school.com.cn" target="_blank">W3school</a>
+                        </li>
+                        <li>
+                            <a href="https://juejin.cn/frontend" target="_blank">掘金</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="book">
+                    <h3>进阶</h3>
+                    <ul>
+                        <li>
+                            <a href="https://zh-hans.reactjs.org/docs/hello-world.html" target="_blank">React</a>
+                        </li>
+                        <li>
+                            <a href="https://cn.vuejs.org/v2/guide" target="_blank">Vue</a>
+                        </li>
+                        <li>
+                            <a href="https://koa.bootcss.com" target="_blank">Koa</a>
+                        </li>
+                        <li>
+                            <a href="https://webpack.docschina.org/concepts" target="_blank">Webpack</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="book">
+                    <h3>蚂蚁</h3>
+                    <ul>
+                        <li>
+                            <a href="https://ant.design/index-cn" target="_blank">Ant Design</a>
+                        </li>
+                        <li>
+                            <a href="https://antv.vision/zh" target="_blank">AntV</a>
+                        </li>
+                        <li>
+                            <a href="https://umijs.org/zh-CN" target="_blank">UmiJS</a>
+                        </li>
+                        <li>
+                            <a href="https://eggjs.org/zh-cn/intro/" target="_blank">Egg.js</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <span>Copyright © 2021支付宝前锋营</span>
+        <a href="https://xcloud.alipay.com" target="blank"><img src="./imgs/afx-logo.png"></a>
+    </footer>
+
+    <script src="./js/index.js"></script>
+
+
+        
+
+
+   
+</body>
+
+</html> 
